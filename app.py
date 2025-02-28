@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from pymongo import MongoClient
-import certifi
 from dotenv import load_dotenv
 import os
 
@@ -8,13 +7,13 @@ import os
 load_dotenv()
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://localhost:27017/mongodbVSCodePlaygroundDB")
-app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "your_secret_key")
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
-# 连接 MongoDB
-client = MongoClient(app.config["MONGO_URI"], tlsCAFile=certifi.where())
-db = client["mongodbVSCodePlaygroundDB"]  # ✅ 确保使用你的数据库名称
-collection = db.sales  # ✅ 确保使用你的集合名称
+# Connect to MongoDB
+client = MongoClient(os.getenv("MONGO_URI"))
+db = client.get_default_database()
+collection = db.sales
 
 # 主页 - 显示所有商品
 @app.route('/')
@@ -76,6 +75,18 @@ def search_product():
         products = list(collection.find({'item': {'$regex': query, '$options': 'i'}}))
         return render_template('home.html', products=products)
     return redirect(url_for('home'))
+
+@app.route('/item/<product_id>')
+def item_detail(product_id):
+    from bson.objectid import ObjectId
+    item = collection.find_one({"_id": ObjectId(product_id)})
+    
+    if item:
+        return render_template('item_detail.html', item=item)
+    else:
+        return "Item not found", 404
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)  # ✅ 开启调试模式，便于开发时发现错误
