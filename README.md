@@ -9,7 +9,13 @@ This system aims to reduce inventory errors, enhance operational efficiency, and
 
 ## User stories
 
-See instructions. Delete this line and place a link to the user stories here.
+- a user, I want to view detailed information about a product so that I can compare options, understand the price and availability, and make an informed purchasing decision.
+- As an admin, I want to add new products to the system so that customers have access to the latest offerings and inventory remains up to date.
+- As a user, I want to view a list of products on the home screen so that I can easily browse available items and quickly find what interests me. 
+- As an admin, I want to edit existing product details so that any incorrect or outdated information can be updated to maintain accuracy and improve user trust.
+- As an admin, I want to delete products from the database so that unavailable or discontinued items are removed, preventing confusion and maintaining a clean catalog.
+- As a user, I want to search for products using keywords so that I can quickly find specific items without having to scroll through long lists.
+
 
 ## Steps necessary to run the software
 
