@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product details</title>
+    <style>
+        /* 通用样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* 商品详情表格 */
+        .product-container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* 编辑按钮 */
+        .edit-btn {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .edit-btn:hover {
+            background-color: #218838;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 480px) {
+            .product-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            .edit-btn {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product details</h1>
+
+    <div class="product-container">
+        <table>
+            <tr>
+                <th>Product properties</th>
+                <th>Product information</th>
+            </tr>
+            <tr>
+                <td>Product name</td>
+                <td id="product-name">iPhone 15 Pro</td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td id="product-id">#A1001</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td id="product-price">$7999</td>
+            </tr>
+        </table>
+
+        <!-- 编辑按钮，点击跳转到编辑页面 -->
+        <a href="edit_detail.html" class="edit-btn">edit information</a>
+    </div>
+
+</body>
+</html>

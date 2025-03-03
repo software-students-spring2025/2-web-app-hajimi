@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Form Container */
+        .edit-container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Input Fields */
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Buttons Container */
+        .button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+        .save-btn {
+            background-color: #007bff;
+        }
+
+        .save-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .back-btn {
+            background-color: #6c757d;
+        }
+
+        .back-btn:hover {
+            background-color: #5a6268;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 480px) {
+            .edit-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            input {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Edit Product</h1>
+
+    <div class="edit-container">
+        <form onsubmit="saveChanges(event)">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" value="iPhone 15 Pro">
+
+            <label for="product-id">Product ID:</label>
+            <input type="text" id="product-id" value="#A1001">
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" value="7999">
+
+            <div class="button-container">
+                <button type="submit" class="btn save-btn">Save</button>
+                <a href="detail_page.html" class="btn back-btn">Back</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function saveChanges(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+
+            // Get user input values
+            let newName = document.getElementById("product-name").value;
+            let newId = document.getElementById("product-id").value;
+            let newPrice = document.getElementById("price").value;
+
+            // Store updated data in localStorage
+            localStorage.setItem("product_name", newName);
+            localStorage.setItem("product_id", newId);
+            localStorage.setItem("product_price", newPrice);
+
+            // Redirect back to product details page
+            window.location.href = "detail_page.html";
+        }
+    </script>
+
+</body>
+</html>
