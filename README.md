@@ -19,7 +19,68 @@ This system aims to reduce inventory errors, enhance operational efficiency, and
 
 ## Steps necessary to run the software
 
-See instructions. Delete this line and place instructions to download, configure, and run the software here.
+## Prerequisites
+Ensure you have the following installed on your system:
+
+- **Python 3.8+**
+- **MongoDB** (Local or Remote)
+- **pip** (Python package manager)
+- **Git**
+- **Virtual Environment (venv) **
+
+### 1. Clone the Repository
+```sh
+git clone https://github.com/software-students-spring2025/2-web-app-hajimi.git
+cd 2-web-app-hajimi
+```
+
+### 2. Set Up a Virtual Environment 
+```sh
+python -m venv venv
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate    # Windows
+```
+
+### 3. Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+### 4. Configure Environment Variables
+Create a `.env` file in the project's root directory and define the following variables:
+
+```ini
+FLASK_APP=app.py
+FLASK_ENV=development
+MONGO_URI=mongodb://localhost:27017/your_database
+SECRET_KEY=your_secret_key
+```
+
+### 5. Start MongoDB (If Running Locally)
+Ensure MongoDB is running before starting the Flask application:
+
+### 6. Run the Application
+```sh
+flask run
+```
+By default, the app runs on **http://127.0.0.1:5000**.
+
+
+## Agile Development Practices
+- **Discord Communication:** Use the team’s Discord channel (e.g., `#team-7`).
+- **User Stories:** Documented as Issues on GitHub.
+- **GitHub Issues Link:** [GitHub Issues](https://github.com/YOUR_GITHUB_USERNAME/your-project/issues)
+
+## Deployment
+For production, use **gunicorn** or **uWSGI** with **nginx**. Example:
+```sh
+gunicorn -w 4 app:app
+```
+
+## License
+This project is licensed under the **MIT License**.
+
+
 
 ## Task boards
 🔆 [Team Hajimi- Sprint 1](https://github.com/orgs/software-students-spring2025/projects/88/views/2)
