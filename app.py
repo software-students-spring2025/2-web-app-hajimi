@@ -45,7 +45,7 @@ def add_product():
 # edit item
 @app.route('/edit/<product_id>', methods=['GET', 'POST'])
 def edit_product(product_id):
-    from bson.objectid import ObjectId  # 导入 ObjectId 以正确查找 MongoDB ID
+    from bson.objectid import ObjectId  
     product = collection.find_one({'_id': ObjectId(product_id)})
     if request.method == 'POST':
         item = request.form['item']
