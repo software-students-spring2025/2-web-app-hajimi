@@ -59,11 +59,6 @@ flask run
 ```
 By default, the app runs on **http://127.0.0.1:5000**.
 
-If authentication is required, install and configure **Flask-Login**:
-```sh
-pip install flask-login
-```
-Follow Flask-Login documentation for integrating authentication.
 
 ## Agile Development Practices
 - **Discord Communication:** Use the team’s Discord channel (e.g., `#team-7`).
