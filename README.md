@@ -8,7 +8,7 @@ Our Inventory Management System streamlines product management with a user-frien
 
 ## User stories
 
-- a user, I want to view detailed information about a product so that I can compare options, understand the price and availability, and make an informed purchasing decision.
+- As a user, I want to view detailed information about a product so that I can compare options, understand the price and availability, and make an informed purchasing decision.
 - As an admin, I want to add new products to the system so that customers have access to the latest offerings and inventory remains up to date.
 - As a user, I want to view a list of products on the home screen so that I can easily browse available items and quickly find what interests me. 
 - As an admin, I want to edit existing product details so that any incorrect or outdated information can be updated to maintain accuracy and improve user trust.
