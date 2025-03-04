@@ -22,5 +22,5 @@ This system aims to reduce inventory errors, enhance operational efficiency, and
 See instructions. Delete this line and place instructions to download, configure, and run the software here.
 
 ## Task boards
-
-See instructions. Delete this line and place a link to the task boards here.
+🔆 [Team Hajimi- Sprint 1](https://github.com/orgs/software-students-spring2025/projects/88/views/2)
+🔆 [Team Hajimi- Sprint 2](https://github.com/software-students-spring2025/2-web-app-hajimi/tree/main)
