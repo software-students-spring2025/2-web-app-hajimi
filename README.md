@@ -56,10 +56,7 @@ MONGO_URI=mongodb+srv://your_username:your_password@your-cluster.mongodb.net/you
 SECRET_KEY=your_secret_key
 ```
 
- 5. Start MongoDB (If Running Locally)
-Ensure MongoDB is running before starting the Flask application:
-
- 6. Run the Application
+ 5. Run the Application
 ```sh
 flask run
 ```
