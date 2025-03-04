@@ -13,11 +13,6 @@ See instructions. Delete this line and place a link to the user stories here.
 
 ## Steps necessary to run the software
 
-# Flask + MongoDB Web Application
-
-## Product Vision Statement
-A simple inventory management web application that allows users to add, edit, delete, and search for products using a MongoDB backend and Flask framework.
-
 ## Prerequisites
 Ensure you have the following installed on your system:
 
@@ -25,9 +20,7 @@ Ensure you have the following installed on your system:
 - **MongoDB** (Local or Remote)
 - **pip** (Python package manager)
 - **Git**
-- **Virtual Environment (venv) (Optional but recommended)**
-
-## Installation & Setup
+- **Virtual Environment (venv) **
 
 ### 1. Clone the Repository
 ```sh
@@ -35,7 +28,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/your-project.git
 cd your-project
 ```
 
-### 2. Set Up a Virtual Environment (Recommended)
+### 2. Set Up a Virtual Environment 
 ```sh
 python -m venv venv
 source venv/bin/activate  # macOS/Linux
@@ -56,48 +49,16 @@ FLASK_ENV=development
 MONGO_URI=mongodb://localhost:27017/your_database
 SECRET_KEY=your_secret_key
 ```
-- If using **MongoDB Atlas**, replace `MONGO_URI` with your Atlas connection string.
-- Do **not** commit the `.env` file to version control.
-- Share the `.env` file securely via the team’s messenger system.
 
-### 5. Create an `env.example` File
-Create a file named `env.example` in the repository to show the expected environment variable format without actual credentials:
-
-```ini
-FLASK_APP=app.py
-FLASK_ENV=development
-MONGO_URI=mongodb://localhost:27017/example_db
-SECRET_KEY=your_secret_key_here
-```
-
-### 6. Start MongoDB (If Running Locally)
+### 5. Start MongoDB (If Running Locally)
 Ensure MongoDB is running before starting the Flask application:
 
-#### On macOS/Linux:
-```sh
-mongod --dbpath /path/to/mongodb/data
-```
-
-#### On Windows:
-```sh
-net start MongoDB  # If installed as a service
-```
-
-### 7. Run the Application
+### 6. Run the Application
 ```sh
 flask run
 ```
 By default, the app runs on **http://127.0.0.1:5000**.
 
-### 8. Access the Application (Example Screens)
-- **Home Page (`/`)** - Displays all products (data retrieved from the database).
-- **Add Product (`/add`)** - Allows adding a new product.
-- **Edit Product (`/edit/<product_id>`)** - Allows modifying an existing product.
-- **Delete Product (`/delete/<product_id>`)** - Deletes a product.
-- **Search Product (`/search`)** - Enables product search functionality.
-- **Product Detail (`/item/<product_id>`)** - Displays details of a single product.
-
-## User Authentication (Optional)
 If authentication is required, install and configure **Flask-Login**:
 ```sh
 pip install flask-login
