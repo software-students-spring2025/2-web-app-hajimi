@@ -65,16 +65,6 @@ flask run
 ```
 By default, the app runs on **http://127.0.0.1:5000**.
 
-
-## Agile Development Practices
-- **Discord Communication:** Use the team’s Discord channel (e.g., `#team-7`).
-- **User Stories:** Documented as Issues on GitHub.
-- **GitHub Issues Link:** [GitHub Issues](https://github.com/YOUR_GITHUB_USERNAME/your-project/issues)
-
-## Deployment
-For production, use **gunicorn** or **uWSGI** with **nginx**. Example:
-```sh
-gunicorn -w 4 app:app
 ```
 
 ## License
