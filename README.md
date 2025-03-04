@@ -52,7 +52,7 @@ Create a `.env` file in the project's root directory and define the following va
 ```ini
 FLASK_APP=app.py
 FLASK_ENV=development
-MONGO_URI=mongodb://localhost:27017/your_database
+MONGO_URI=mongodb+srv://your_username:your_password@your-cluster.mongodb.net/your_database
 SECRET_KEY=your_secret_key
 ```
 
