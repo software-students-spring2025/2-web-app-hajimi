@@ -26,7 +26,7 @@ Ensure you have the following installed on your system:
 - **MongoDB** (Local or Remote)
 - **pip** (Python package manager)
 - **Git**
-- **Virtual Environment (venv) **
+- **Virtual Environment (venv)**
 
  1. Clone the Repository
 ```sh
