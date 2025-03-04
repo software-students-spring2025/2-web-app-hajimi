@@ -4,8 +4,7 @@ A little exercise to build a web application following an agile development proc
 
 ## Product vision statement
 
-Our Inventory Management System is designed to streamline and optimize product management for stores and warehouses. By providing an intuitive and efficient platform, users can seamlessly add, edit, delete, and search for products, while maintaining a clear overview of stock levels.
-This system aims to reduce inventory errors, enhance operational efficiency, and improve decision-making through real-time data accessibility. With a user-friendly interface and a robust backend powered by Flask and MongoDB, our solution ensures reliability and scalability for businesses of all sizes. Our vision is to create a seamless, accurate, and efficient inventory management experience, empowering businesses to focus on growth while minimizing stock-related inefficiencies.
+Our Inventory Management System streamlines product management with a user-friendly interface and a robust Flask-MongoDB backend, ensuring real-time data accessibility, reduced inventory errors, and enhanced operational efficiency for businesses of all sizes.
 
 ## User stories
 
