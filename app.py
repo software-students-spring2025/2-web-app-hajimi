@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
 
-# 加载环境变量
+# load environment variables
 load_dotenv()
 
 app = Flask(__name__)
@@ -15,13 +15,13 @@ client = MongoClient(os.getenv("MONGO_URI"))
 db = client.get_default_database()
 collection = db.sales
 
-# 主页 - 显示所有商品
+# home page - show all items
 @app.route('/')
 def home():
     products = list(collection.find())
     return render_template('home.html', products=products)
 
-# 添加新商品
+# add new item
 @app.route('/add', methods=['GET', 'POST'])
 def add_product():
     if request.method == 'POST':
@@ -29,17 +29,20 @@ def add_product():
         price = float(request.form['price'])
         quantity = int(request.form['quantity'])
 
-        # 插入到 MongoDB
-        collection.insert_one({
+        if price < 0:
+            flash('Invalid price input')
+        # insert into MongoDB
+        else:
+            collection.insert_one({
             'item': item,
             'price': price,
             'quantity': quantity
-        })
-        flash('Product added successfully!')
+            })
+            flash('Product added successfully!')
         return redirect(url_for('home'))
     return render_template('add.html')
 
-# 编辑商品
+# edit item
 @app.route('/edit/<product_id>', methods=['GET', 'POST'])
 def edit_product(product_id):
     from bson.objectid import ObjectId  # 导入 ObjectId 以正确查找 MongoDB ID
@@ -49,7 +52,7 @@ def edit_product(product_id):
         price = float(request.form['price'])
         quantity = int(request.form['quantity'])
 
-        # 更新 MongoDB
+        # update MongoDB
         collection.update_one({'_id': ObjectId(product_id)}, {'$set': {
             'item': item,
             'price': price,
@@ -59,7 +62,7 @@ def edit_product(product_id):
         return redirect(url_for('home'))
     return render_template('edit.html', product=product)
 
-# 删除商品
+# delete item
 @app.route('/delete/<product_id>')
 def delete_product(product_id):
     from bson.objectid import ObjectId
@@ -67,7 +70,7 @@ def delete_product(product_id):
     flash('Product deleted successfully!')
     return redirect(url_for('home'))
 
-# 搜索商品
+# search item
 @app.route('/search', methods=['GET', 'POST'])
 def search_product():
     if request.method == 'POST':
@@ -76,6 +79,7 @@ def search_product():
         return render_template('home.html', products=products)
     return redirect(url_for('home'))
 
+#show item detail
 @app.route('/item/<product_id>')
 def item_detail(product_id):
     from bson.objectid import ObjectId
@@ -89,4 +93,4 @@ def item_detail(product_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)  # ✅ 开启调试模式，便于开发时发现错误
+    app.run(debug=True)  # debug True

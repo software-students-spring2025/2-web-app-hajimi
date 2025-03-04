@@ -12,7 +12,6 @@ h2 {
 }
 
 /* Navbar */
-/* 修正导航栏背景和文字颜色 */
 .navbar {
     background-color: #3b5998 !important; /* 深蓝色背景 */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
