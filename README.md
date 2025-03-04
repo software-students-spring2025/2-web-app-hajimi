@@ -19,8 +19,55 @@ This system aims to reduce inventory errors, enhance operational efficiency, and
 
 ## Steps necessary to run the software
 
-See instructions. Delete this line and place instructions to download, configure, and run the software here.
+ Prerequisites
+Ensure you have the following installed on your system:
+
+- **Python 3.8+**
+- **MongoDB** (Local or Remote)
+- **pip** (Python package manager)
+- **Git**
+- **Virtual Environment (venv) **
+
+ 1. Clone the Repository
+```sh
+git clone https://github.com/software-students-spring2025/2-web-app-hajimi.git
+cd 2-web-app-hajimi
+```
+
+ 2. Set Up a Virtual Environment 
+```sh
+python -m venv venv
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate    # Windows
+```
+
+ 3. Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+ 4. Configure Environment Variables
+Create a `.env` file in the project's root directory and define the following variables:
+
+```ini
+FLASK_APP=app.py
+FLASK_ENV=development
+MONGO_URI=mongodb://localhost:27017/your_database
+SECRET_KEY=your_secret_key
+```
+
+ 5. Start MongoDB (If Running Locally)
+Ensure MongoDB is running before starting the Flask application:
+
+ 6. Run the Application
+```sh
+flask run
+```
+By default, the app runs on **http://127.0.0.1:5000**.
+
+
+
 
 ## Task boards
-
-See instructions. Delete this line and place a link to the task boards here.
+🔆 [Team Hajimi- Sprint 1](https://github.com/orgs/software-students-spring2025/projects/88/views/2)
+🔆 [Team Hajimi- Sprint 2](https://github.com/orgs/software-students-spring2025/projects/136)
