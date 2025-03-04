@@ -23,4 +23,4 @@ See instructions. Delete this line and place instructions to download, configure
 
 ## Task boards
 🔆 [Team Hajimi- Sprint 1](https://github.com/orgs/software-students-spring2025/projects/88/views/2)
-🔆 [Team Hajimi- Sprint 2](https://github.com/software-students-spring2025/2-web-app-hajimi/tree/main)
+🔆 [Team Hajimi- Sprint 2](https://github.com/orgs/software-students-spring2025/projects/136)
