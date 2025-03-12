@@ -65,5 +65,5 @@ By default, the app runs on **http://127.0.0.1:5000**.
 
 
 ## Task boards
-🔆 [Team Hajimi- Sprint 1](https://github.com/orgs/software-students-spring2025/projects/88/views/2)
+🔆 [Team Hajimi- Sprint 1](https://github.com/orgs/software-students-spring2025/projects/88)
 🔆 [Team Hajimi- Sprint 2](https://github.com/orgs/software-students-spring2025/projects/136)
